@@ -1,13 +1,29 @@
-body {
+body.flex {
   display: flex;
-  margin: auto;
-  margin-top: 120px;
+  margin: 5px auto;
   font-size: 15px;
   width: 60%;
   background-color: aliceblue;
   color: hsl(0, 0%, 95%);
 }
+body.grid {
+    background-color: aliceblue;
+}
+.grid-btn, .flex-btn {
+    text-decoration: none;
+    position: absolute;
+    right: 50px;
+    text-decoration: none;
+  background-color:hsl(184, 100%, 22%);
+  color: hsl(0, 0%, 95%);
+  padding: 10px;
+  border-radius: 20px;
+}
+.grid-btn:hover, .flex-btn:hover {
+    background-color: hsl(31, 77%, 52%);
+}
 .sedans {
+  margin-top: 100px;
   background-color: hsl(31, 77%, 52%);
   padding: 30px 50px;
   line-height: 1.5;
@@ -15,12 +31,14 @@ body {
   border-bottom-left-radius: 20px;
 }
 .suvs {
+  margin-top: 100px;
   text-decoration: none;
   background-color: hsl(184, 100%, 22%);
   padding: 30px 50px;
   line-height: 1.5;
 }
 .luxury {
+  margin-top: 100px;
   background-color: hsl(179, 100%, 13%);
   padding: 30px 50px;
   line-height: 1.5;
@@ -43,21 +61,21 @@ h1 {
   text-decoration: none;
   background-color: hsl(0, 0%, 95%);
   color: hsl(31, 77%, 52%);
-  padding: 9px;
+  padding: 10px;
   border-radius: 20px;
 }
 .btn-suv {
   text-decoration: none;
   background-color: hsl(0, 0%, 95%);
   color: hsl(184, 100%, 22%);
-  padding: 9px;
+  padding: 10px;
   border-radius: 20px;
 }
 .btn-lxr {
   text-decoration: none;
   background-color: hsl(0, 0%, 95%);
   color: hsl(179, 100%, 13%);
-  padding: 9px;
+  padding: 10px;
   border-radius: 20px;
 }
 .btn-sdn:hover {
@@ -74,4 +92,42 @@ h1 {
   background-color: hsl(179, 100%, 13%);
   color: hsl(0, 0%, 95%);
   border-style: solid;
+}
+.container {
+    width: 40%;
+    margin: auto;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+.item1 {
+    background: orangered;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    padding: 50px;
+}
+.item2 {
+    background: orange;
+    grid-column: 4 / end;
+    grid-row: 1 / span 2;
+    padding: 50px;
+}
+.item3 {
+    background: green;
+    grid-column: 1 / span 2;
+    grid-row: 3 / end ;
+    padding: 50px;
+}
+.item4 {
+    background: rgb(0, 102, 255);
+    grid-column: 3 / end;
+    padding: 50px;
+}
+.item5 {
+    background: rgb(0, 102, 255);
+    grid-column: 3 /end;
+    grid-row: span 2;
+    padding: 50px;
 }
